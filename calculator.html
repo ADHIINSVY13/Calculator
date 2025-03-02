@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="stickers">
+        <img src="girl" alt="Sticker 1" class="sticker left">
+        <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Sticker 2" class="sticker right">
+    </div>
+
+    <div class="container">
+        <h2>Calculator 🧮</h2>
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+            <div class="buttons">
+                <button onclick="clearDisplay()">🧹</button>
+                <button onclick="appendToDisplay('1')">1️⃣</button>
+                <button onclick="appendToDisplay('2')">2️⃣</button>
+                <button onclick="appendToDisplay('+')">➕</button>
+                <button onclick="appendToDisplay('3')">3️⃣</button>
+                <button onclick="appendToDisplay('4')">4️⃣</button>
+                <button onclick="appendToDisplay('5')">5️⃣</button>
+                <button onclick="appendToDisplay('-')">➖</button>
+                <button onclick="appendToDisplay('6')">6️⃣</button>
+                <button onclick="appendToDisplay('7')">7️⃣</button>
+                <button onclick="appendToDisplay('8')">8️⃣</button>
+                <button onclick="appendToDisplay('*')">✖️</button>
+                <button onclick="appendToDisplay('9')">9️⃣</button>
+                <button onclick="appendToDisplay('0')">0️⃣</button>
+                <button onclick="calculateResult()">✅</button>
+                <button onclick="appendToDisplay('/')">➗</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
