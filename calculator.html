@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <div class="background-animation"></div>
+
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h2>Calculator 🧮</h2>
+      <button onclick="clearDisplay()" style="padding: 8px 12px; font-size: 16px;">🧹</button>
+    </div>
+
+    <div class="calculator">
+      <input type="text" id="display" readonly>
+      <div class="buttons">
+        <button onclick="appendToDisplay('1')">1️⃣</button>
+        <button onclick="appendToDisplay('2')">2️⃣</button>
+        <button onclick="appendToDisplay('3')">3️⃣</button>
+        <button onclick="appendToDisplay('+')">➕</button>
+        <button onclick="appendToDisplay('4')">4️⃣</button>
+        <button onclick="appendToDisplay('5')">5️⃣</button>
+        <button onclick="appendToDisplay('6')">6️⃣</button>
+        <button onclick="appendToDisplay('-')">➖</button>
+        <button onclick="appendToDisplay('7')">7️⃣</button>
+        <button onclick="appendToDisplay('8')">8️⃣</button>
+        <button onclick="appendToDisplay('9')">9️⃣</button>
+        <button onclick="appendToDisplay('*')">✖️</button>
+        <button onclick="appendToDisplay('0')">0️⃣</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="calculateResult()">✅</button>
+        <button onclick="appendToDisplay('/')">➗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden Audio for Click Sound -->
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
+
+  <!-- Solid Footer (Fixed at bottom) -->
+  <footer style="text-align:center; padding:10px; background-color:rgba(255, 255, 255, 0.9); backdrop-filter:none; font-weight:bold; position:fixed; bottom:0; width:100%; z-index:999;">
+    © 2025 Adhiinsvy | Made with ❤️
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Play click sound on any click
+    document.addEventListener('click', function() {
+      const sound = document.getElementById('clickSound');
+      sound.currentTime = 0;
+      sound.play();
+    });
+
+    // Append value to the display
+    function appendToDisplay(value) {
+      const display = document.getElementById('display');
+      display.value += value;
+    }
+
+    // Clear the display
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+
+    // Calculate the result
+    function calculateResult() {
+      const display = document.getElementById('display');
+      try {
+        display.value = eval(display.value);
+      } catch (error) {
+        display.value = 'Error';
+      }
+    }
+  </script>
+</body>
+</html>
