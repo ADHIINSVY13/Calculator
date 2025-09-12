@@ -1,0 +1,24 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A simple and user-friendly calculator built to perform basic arithmetic operations. This project was created as a part of my learning journey in programming and UI development.",
+  "main": "calculator.js",
+  "scripts": {
+    "predeploy": "echo 'Preparing deployment...'",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ADHIINSVY13/Calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ADHIINSVY13/Calculator/issues"
+  },
+  "homepage": "https://ADHIINSVY13.github.io/Calculator",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
